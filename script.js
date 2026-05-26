@@ -30,12 +30,6 @@ add_btn.addEventListener("click",function(){
     delete_btn.textContent = "Delete";
     li.appendChild(delete_btn);
 
-    // this will create a list element when button is clicked
-    // now we need to get the text written in the input
-
-    
-    // a string is stored in the content variable.
-
     list.appendChild(li);
 
     // lets vaccant the input.
