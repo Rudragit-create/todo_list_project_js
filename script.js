@@ -43,4 +43,20 @@ add_btn.addEventListener("click",function(){
     input.value = "";
 });
 
+// delete feature:
 
+// here i need to delete a list in ul when user click that particular delete button
+
+const delete_btn = document.getElementsByClassName("delete-btn");
+// delete_btn -> html collection
+
+
+for(let i=0;i<delete_btn.length;i++){
+    delete_btn[i].addEventListener("click",function(){
+        // console.log(this);
+        // getting the li
+
+        let parent = this.parentElement;
+        parent.remove();
+    })
+}
