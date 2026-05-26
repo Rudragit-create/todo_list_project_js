@@ -14,7 +14,8 @@ input.addEventListener("keydown", function(event) {
 
 add_btn.addEventListener("click",function(){
     //prevent empty add:
-    if(input.value === "") return;
+    if(input.value.trim() === "") return;
+    // add trim for --> "   " this type of input
     // when the button is clicked new task is added to the list
     const li = document.createElement("li");
     li.classList.add("todo-item");
@@ -25,7 +26,7 @@ add_btn.addEventListener("click",function(){
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.addEventListener("click",function(){
+    checkbox.addEventListener("change",function(){ // use change insted of click
         const span = this.parentElement.children[1];
         if(checkbox.checked){
             span.classList.add("completed");
@@ -57,6 +58,7 @@ add_btn.addEventListener("click",function(){
 
     // lets vaccant the input.
     input.value = "";
+    // can use input.focus() so that user can write immediately.
 });
 
 // when we createElement then it get added to ram (js memory) , browser -> nothing
