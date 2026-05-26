@@ -25,9 +25,18 @@ add_btn.addEventListener("click",function(){
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+    checkbox.addEventListener("click",function(){
+        const span = this.parentElement.children[1];
+        if(checkbox.checked){
+            span.classList.add("completed");
+        }
+        else{
+            span.classList.remove("completed")
+        }
+    })
     div.appendChild(checkbox);
 
-    const span = document.createElement("span");
+     const span = document.createElement("span");
     const content = input.value;
     span.textContent = content;
     div.appendChild(span);
@@ -50,7 +59,6 @@ add_btn.addEventListener("click",function(){
     input.value = "";
 });
 
-
 // when we createElement then it get added to ram (js memory) , browser -> nothing
 // when we do append child then it get added to html --> dom
-
+// good practice add eventlistner before append 
