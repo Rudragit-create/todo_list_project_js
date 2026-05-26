@@ -5,6 +5,13 @@ let input = document.getElementById("todoInput");
 
 
 
+input.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        add_btn.click();
+    }
+});
+// added the Enter key feature
+
 add_btn.addEventListener("click",function(){
     //prevent empty add:
     if(input.value === "") return;
@@ -35,4 +42,5 @@ add_btn.addEventListener("click",function(){
     // lets vaccant the input.
     input.value = "";
 });
+
 
