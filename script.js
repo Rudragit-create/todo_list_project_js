@@ -60,3 +60,4 @@ for(let i=0;i<delete_btn.length;i++){
         parent.remove();
     })
 }
+
